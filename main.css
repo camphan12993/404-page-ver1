@@ -1,0 +1,80 @@
+:root {
+  --cx: 0;
+  --cy: 0;
+}
+
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at var(--cx) var(--cy),
+    transparent,
+    rgba(0, 0, 0, 0.9) 60%
+  );
+  pointer-events: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #30475e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 140px;
+  font-weight: bold;
+  line-height: 140px;
+  margin: 0;
+  letter-spacing: 10px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 36px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.back {
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s;
+  padding: 8px 12px;
+}
+
+.back span {
+  margin-left: 10px;
+}
+.back:hover {
+  color: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
+}
